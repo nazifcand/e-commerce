@@ -1,0 +1,36 @@
+%badge-base {
+  width: 18px;
+  height: 18px;
+  border-radius: 0.35rem;
+  background-color: $main-color;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  transition: 0.35s all ease;
+}
+
+.badge {
+  @extend %badge-base;
+
+  &.warning {
+    background-color: $warning;
+  }
+
+  &.danger {
+    background-color: $danger;
+  }
+
+  &.success {
+    background-color: $success;
+  }
+
+  &.info {
+    background-color: $info;
+  }
+
+  &.dark {
+    background-color: $dark;
+  }
+}

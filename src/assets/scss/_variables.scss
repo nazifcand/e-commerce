@@ -1,0 +1,27 @@
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap';
+
+// fonts
+$font-family: 'Poppins';
+
+// colors
+$main-color: #ff671d;
+
+$text-dark: #181c32;
+$text: #3f4254;
+$text-light: #7e8299;
+
+$dark: #181c32;
+
+$grey-dark: #7e8299;
+$grey: #e4e6ef;
+$grey-light: #f3f6f9;
+
+$success: #1bc5bd;
+$danger: #f64e60;
+$warning: #ffa800;
+$info: #8950fc;
+
+$xs: '(max-width: 576px)';
+$s: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$m: 'only screen and (min-width: 768px) and (max-width: 991px)';
+$l: 'only screen and (min-width: 992px) and (max-width: 1199px)';

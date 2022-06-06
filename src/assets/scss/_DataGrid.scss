@@ -1,0 +1,241 @@
+.data-grid {
+  width: 100%;
+
+  @media #{$xs} {
+    width: max-content;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 0.35rem;
+    font-size: 0.85rem;
+    text-align: left;
+    column-gap: 12px;
+    transition: 0.35s all ease;
+    background-color: rgba($grey, 0.2);
+
+    & + .row {
+      margin-top: 0.5rem;
+    }
+
+    &.title {
+      background-color: transparent;
+      border-bottom: 1px solid $grey;
+      border-radius: unset;
+
+      & > div {
+        font-weight: 600 !important;
+
+        &.sortable {
+          cursor: pointer;
+        }
+
+        &.is-sorting {
+          color: $main-color;
+        }
+
+        i {
+          margin-left: 0.35rem;
+        }
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    &.secondhand {
+      background-color: rgba($warning, 0.1);
+      position: relative;
+
+      &:hover {
+        background-color: rgba($warning, 0.25);
+      }
+    }
+
+    &.my {
+      background-color: rgba($danger, 0.1);
+      position: relative;
+
+      &:hover {
+        background-color: rgba($danger, 0.25);
+      }
+    }
+
+    &.active {
+      background-color: rgba($success, 0.1);
+      position: relative;
+
+      &:hover {
+        background-color: rgba($success, 0.25);
+      }
+    }
+
+    &:hover {
+      background-color: rgba($grey, 0.5);
+    }
+
+    .cell {
+      &.cell-company {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        min-width: 200px;
+
+        .icon {
+          font-size: 1.25rem;
+          margin-right: 1rem;
+          color: $text-light;
+        }
+
+        .name {
+          display: flex;
+          flex-direction: column;
+          font-weight: 500;
+        }
+      }
+
+      &.cell-product {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        min-width: 200px;
+
+        .image {
+          width: 40px;
+          min-width: 40px;
+          height: 40px;
+          border: 1px solid $grey;
+          border-radius: 0.35rem;
+          overflow: hidden;
+          padding: 5px;
+          margin-right: 1rem;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .name {
+          display: flex;
+          flex-direction: column;
+          font-weight: 500;
+
+          .product-details {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            margin-top: 0.5rem;
+            font-size: 0.7rem;
+
+            & > div {
+              span {
+                color: $grey-dark;
+              }
+              strong {
+                color: $text;
+              }
+            }
+          }
+        }
+      }
+
+      &.cell-price {
+        width: 100px;
+        min-width: 100px;
+        font-weight: 500;
+        font-size: 0.85rem;
+      }
+
+      &.cell-quantity {
+        width: 100px;
+        min-width: 100px;
+      }
+
+      &.cell-listing-status {
+        width: 75px;
+        min-width: 75px;
+      }
+
+      &.cell-expiry {
+        width: 100px;
+        min-width: 100px;
+      }
+
+      &.cell-listing-shipment {
+        width: 125px;
+        min-width: 125px;
+      }
+
+      &.cell-add-cart {
+        width: 125px;
+        min-width: 125px;
+        font-size: 1.25rem;
+        display: flex;
+        justify-content: end;
+      }
+
+      &.cell-order-no {
+        flex: 1;
+      }
+
+      &.cell-date {
+        min-width: 125px;
+        width: 125px;
+      }
+
+      &.cell-item-count {
+        width: 100px;
+        min-width: 100px;
+      }
+
+      &.cell-payment-status {
+        width: 150px;
+        min-width: 150px;
+
+        .btn {
+          font-size: 0.7rem;
+        }
+      }
+
+      &.cell-order-status {
+        width: 250px;
+        min-width: 250px;
+        max-width: 250px;
+        line-height: 1.35;
+      }
+
+      &.cell-action {
+        width: 35px;
+        min-width: 35px;
+
+        .action {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 35px;
+          height: 35px;
+          border-radius: 0.35rem;
+          box-sizing: border-box;
+          transition: 0.35s all ease;
+          cursor: pointer;
+          position: relative;
+          color: $text;
+          background-color: $grey;
+          font-size: 0.85rem;
+
+          &:hover {
+            background-color: darken($grey, 10%);
+          }
+        }
+      }
+    }
+  }
+}

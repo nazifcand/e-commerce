@@ -1,0 +1,102 @@
+%base-heading {
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  @extend %base-heading;
+  font-size: 2rem;
+}
+
+h2 {
+  @extend %base-heading;
+  font-size: 1.75rem;
+}
+
+h3 {
+  @extend %base-heading;
+  font-size: 1.5rem;
+}
+
+h4 {
+  @extend %base-heading;
+  font-size: 1.25rem;
+}
+
+h5 {
+  @extend %base-heading;
+  font-size: 1rem;
+}
+
+h6 {
+  @extend %base-heading;
+  font-size: 0.75rem;
+}
+
+.text-primary {
+  color: $main-color;
+}
+
+.text-success {
+  color: $success;
+}
+
+.text-danger {
+  color: $danger;
+}
+
+.text-warning {
+  color: $warning;
+}
+
+.text-info {
+  color: $info;
+}
+
+.text-light {
+  color: $text-light;
+}
+
+.html {
+  font-size: 0.85rem;
+
+  & > * {
+    margin: 1.5rem 0;
+  }
+
+  p {
+    color: $text-light;
+    margin: 1rem 0;
+    line-height: 1.5;
+
+    & + p {
+      margin-top: 1rem;
+    }
+  }
+
+  ul,
+  ol {
+    margin-left: 10px;
+
+    li {
+      & + li {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: alpha;
+  }
+
+  pre {
+    padding: 20px;
+    background-color: $grey-light;
+    border-radius: 0.35rem;
+    box-sizing: border-box;
+  }
+}

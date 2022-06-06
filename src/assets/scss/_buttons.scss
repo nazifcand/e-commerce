@@ -1,0 +1,77 @@
+%button-base {
+  background-color: $grey;
+  width: fit-content;
+  border: none;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 0.3rem;
+  color: $text;
+  font-family: $font-family;
+  cursor: pointer;
+  transition: 0.25s background-color ease;
+  display: inline-block;
+  font-weight: 500;
+
+  &:hover {
+    background-color: darken($grey, 10%);
+  }
+}
+
+// mixins
+@mixin btnColor($color) {
+  color: $color;
+  background-color: rgba($color, 0.25);
+
+  &:hover {
+    background-color: $color;
+    color: #fff;
+  }
+
+  &.dark {
+    background-color: $color;
+    color: #fff;
+
+    &:hover {
+      background-color: darken($color, 10%);
+    }
+  }
+}
+
+// buttons
+.btn {
+  @extend %button-base;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &.checkout-btn {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center !important;
+  }
+
+  &.primary {
+    @include btnColor($main-color);
+  }
+
+  &.success {
+    @include btnColor($success);
+  }
+
+  &.danger {
+    @include btnColor($danger);
+  }
+
+  &.warning {
+    @include btnColor($warning);
+  }
+
+  &.info {
+    @include btnColor($info);
+  }
+}

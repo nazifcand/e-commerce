@@ -1,0 +1,48 @@
+%label-base {
+  background-color: $grey;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.3rem;
+  color: $text;
+  font-family: $font-family;
+  transition: 0.25s background-color ease;
+  display: inline-block;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+// mixins
+@mixin labelColor($color) {
+  color: $color;
+  background-color: rgba($color, 0.2);
+
+  &.dark {
+    color: #fff;
+    background-color: $color;
+  }
+}
+
+// buttons
+.label {
+  @extend %label-base;
+
+  &.primary {
+    @include labelColor($main-color);
+  }
+
+  &.success {
+    @include labelColor($success);
+  }
+
+  &.danger {
+    @include labelColor($danger);
+  }
+
+  &.warning {
+    @include labelColor($warning);
+  }
+
+  &.info {
+    @include labelColor($info);
+  }
+}
